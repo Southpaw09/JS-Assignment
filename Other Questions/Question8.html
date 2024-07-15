@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        <img src="" alt="" width="600" id="image">
+    </div>
+</body>
+<script>
+   const imagesArray = ['https://plus.unsplash.com/premium_photo-1719818037851-56a06678e925?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8','https://images.unsplash.com/photo-1720736005617-db0603b42149?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8','https://plus.unsplash.com/premium_photo-1720718935493-5421c4f52214?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8', 'https://images.unsplash.com/photo-1720728659931-388fa6f62f8f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2fHx8ZW58MHx8fHx8' ];
+
+   const image = document.getElementById('image');
+
+   function setImageSource(){
+    let i=0;
+    do{
+        image.setAttribute('src', imagesArray[i])
+        i++;
+        if(i=imagesArray.length){
+            setTimeout(i=0, 3000)
+        }
+    }while(i>false)
+}
+
+   setTimeout(setImageSource(), 3000);
+
+   
+</script>
+</html>
